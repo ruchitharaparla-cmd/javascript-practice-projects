@@ -1,0 +1,67 @@
+
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f1f1f1;
+    color: #333;
+    text-align: center;
+    padding: 30px;
+}
+
+h1 {
+    font-family: cursive;
+}
+
+.sticky-notes-container {
+    margin: 20px auto;
+}
+
+textarea {
+    width: 300px;
+    height: 100px;
+    background-color: #fefec0;
+    padding: 10px;
+    font-size: 16px;
+}
+
+button {
+    cursor: pointer;
+    padding: 8px 12px;
+    margin: 5px;
+}
+
+.sticky-notes-container > button {
+    color: #11ff00;
+    font-size: 25px;
+}
+
+.notes-container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 15px;
+    margin-top: 25px;
+}
+
+.sticky-note {
+    position: relative;
+    width: 180px;
+    min-height: 150px;
+    padding: 35px 15px 15px;
+    box-shadow: 2px 3px 8px #ccc;
+    overflow-wrap: anywhere;
+}
+
+.sticky-note-content {
+    text-align: left;
+    outline: none;
+}
+
+.sticky-note button {
+    position: absolute;
+    top: 5px;
+    right: 5px;
+    background-color: #e54b3a;
+    color: white;
+    border: none;
+    border-radius: 5px;
+}
