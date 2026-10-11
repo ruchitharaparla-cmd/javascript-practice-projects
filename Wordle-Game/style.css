@@ -1,0 +1,175 @@
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f4f4f4;
+    color: #333;
+    min-height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 20px;
+}
+
+.game-container {
+    width: 100%;
+    max-width: 500px;
+    background-color: #fff;
+    padding: 30px 20px;
+    border-radius: 12px;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+    text-align: center;
+}
+
+h1 {
+    font-size: 32px;
+    margin-bottom: 12px;
+}
+
+p {
+    font-size: 16px;
+    margin-bottom: 20px;
+}
+
+input {
+    width: 100%;
+    max-width: 280px;
+    padding: 12px;
+    border: 2px solid #ddd;
+    border-radius: 6px;
+    font-size: 18px;
+    text-align: center;
+    text-transform: uppercase;
+    outline: none;
+    margin: 10px 0;
+}
+
+input:focus {
+    border-color: #6aaa64;
+}
+
+button {
+    display: block;
+    margin: 12px auto;
+    padding: 12px 25px;
+    background-color: #6aaa64;
+    color: white;
+    border: none;
+    border-radius: 6px;
+    font-size: 16px;
+    cursor: pointer;
+    transition: background-color 0.2s, transform 0.2s;
+}
+
+button:hover {
+    background-color: #578f51;
+    transform: scale(1.03);
+}
+
+button:disabled {
+    background-color: #999;
+    cursor: not-allowed;
+    transform: none;
+}
+
+#message {
+    margin-top: 15px;
+    font-weight: bold;
+}
+
+.letter-squares {
+    display: flex;
+    justify-content: center;
+    gap: 8px;
+    margin-top: 20px;
+    flex-wrap: wrap;
+}
+
+.letter-square {
+    width: 50px;
+    height: 50px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border: 2px solid #ddd;
+    font-size: 22px;
+    font-weight: bold;
+    text-transform: uppercase;
+    color: white;
+}
+
+.correct {
+    background-color: #6aaa64;
+    border-color: #6aaa64;
+}
+
+.present {
+    background-color: #c9b458;
+    border-color: #c9b458;
+}
+
+.absent {
+    background-color: #787c7e;
+    border-color: #787c7e;
+}
+.wordle-board {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 6px;
+    margin: 24px auto;
+}
+
+.letter-row {
+    display: flex;
+    flex-direction: row;
+    gap: 6px;
+}
+
+.letter-square {
+    width: 45px;
+    height: 45px;
+    min-width: 45px;
+    flex-shrink: 0;
+    border: 2px solid #d3d6da;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    box-sizing: border-box;
+    font-size: 22px;
+    font-weight: bold;
+    text-transform: uppercase;
+}
+.wordle-board > .letter-row {
+    display: flex !important;
+    flex-direction: row !important;
+    flex-wrap: nowrap !important;
+    gap: 6px;
+}
+
+.wordle-board > .letter-row > .letter-square {
+    display: flex !important;
+    width: 45px !important;
+    height: 45px !important;
+    min-width: 45px !important;
+    flex: 0 0 45px !important;
+}
+@media (max-width: 400px) {
+    .game-container {
+        padding: 24px 14px;
+    }
+
+    h1 {
+        font-size: 27px;
+    }
+
+    .letter-square {
+        width: 43px;
+        height: 43px;
+    }
+}
